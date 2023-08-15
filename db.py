@@ -7,7 +7,7 @@ load_dotenv()
 database = mysql.connector.connect(
     host = os.environ.get('HOST'),
     user = os.environ.get('USER'),
-    password = os.environ.get('PASSWORD')
+    password = os.environ.get('PASSWRD')
 )
 
 
