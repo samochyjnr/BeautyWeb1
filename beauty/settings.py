@@ -84,10 +84,10 @@ WSGI_APPLICATION = 'beauty.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get('NAME'),
-        'USER': os.environ.get('USER'),
-        'PASSWORD': os.environ.get('PASSWORD'),
-        'HOST': os.environ.get('HOST'),
+        'NAME': 'beauty',
+        'USER': 'root',
+        'PASSWORD': 'Bimbo4wife',
+        'HOST': 'localhost',
         'PORT':'3306',
     }
 }
