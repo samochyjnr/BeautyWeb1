@@ -55,7 +55,8 @@ class Product(models.Model):
     description = models.TextField(default='Enter your product Description')
     price = models.DecimalField(max_digits=8888888, decimal_places=2, default='400.00')
     old_price = models.DecimalField(max_digits=888888888888, decimal_places=2, default='600.00')
-    
+    specification = models.TextField(null=True, blank=True)
+    product_status = models.CharField(choices=STATUS, max_length=10, default='In Review')
     status = models.BooleanField(default=True)
     in_stock = models.BooleanField(default=True)
     featured = models.BooleanField(default=False)
