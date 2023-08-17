@@ -63,6 +63,7 @@ class Product(models.Model):
     digital = models.BooleanField(default=False)
     date = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(null=True, blank=True)
+    review = models.TextField()
     
     
     class Meta:

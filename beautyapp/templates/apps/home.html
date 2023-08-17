@@ -851,11 +851,13 @@
                             <!-- featured category start -->
                             <div class="featured-carousel-active slick-padding slick-arrow-style">
                                 <!-- product single item start -->
+                                {% if record %}
+                                    {% for product in record %}
                                 <div class="product-item fix">
                                     <div class="product-thumb">
                                         <a href="product-details.html">
-                                            <img src="{% static '/img/product/product-img1.jpg' %}" class="img-pri" alt="">
-                                            <img src="{% static '/img/product/product-img2.jpg' %}" class="img-sec" alt="">
+                                            <img src="{{ product.image.url }}" class="img-pri" alt="">
+                                            <img src="{{ product.image.url }}" class="img-sec" alt="">
                                         </a>
                                         <div class="product-label">
                                             <span>new</span>
@@ -872,25 +874,30 @@
                                                     class="fa fa-shopping-cart"></i></a>
                                         </div>
                                     </div>
+                                    
                                     <div class="product-content">
-                                        <h4><a href="product-details.html">vertual product 01</a></h4>
+                                        <h4><a href="product-details.html">{{ product.title }}</a></h4>
                                         <div class="pricebox">
-                                            <span class="regular-price">$70.00</span>
+                                            <span class="regular-price">{{ product.price }}</span>
                                             <div class="ratings">
                                                 <span class="good"><i class="fa fa-star"></i></span>
                                                 <span class="good"><i class="fa fa-star"></i></span>
                                                 <span class="good"><i class="fa fa-star"></i></span>
                                                 <span class="good"><i class="fa fa-star"></i></span>
                                                 <span><i class="fa fa-star"></i></span>
-                                                <div class="pro-review">
+                                                <!--<div class="pro-review">
                                                     <span>1 review(s)</span>
-                                                </div>
+                                                </div> -->
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                {% endfor %}
+                                {% endif %}
                                 <!-- product single item end -->
                                 <!-- product single item start -->
+
+                                
                                 <div class="product-item fix">
                                     <div class="product-thumb">
                                         <a href="product-details.html">
