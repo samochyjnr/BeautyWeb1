@@ -8576,12 +8576,12 @@ h1, h2, h3, h4, h5,
 
 .intro {
   width: 100%;
-  background: #b7472a;
+  background: #c6ecd9;
   padding: 30px; }
   .intro.color-1 {
-    background: #ab4227; }
+    background: #c6ecd9; }
   .intro.color-2 {
-    background: #a23f25; }
+    background: #c6ecd9; }
   .intro .icon {
     margin-right: 20px; }
     .intro .icon span {
@@ -8602,7 +8602,7 @@ h1, h2, h3, h4, h5,
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease; 
   transition: all 0.3s ease; }
   .product .img {
     display: block;
