@@ -11,4 +11,7 @@ def about(request):
 
 def product(request):
     return render(request, 'apps/product.html', {})
+
+def product_single(request):
+    return render(request, 'apps/product_single.html', {})
     
