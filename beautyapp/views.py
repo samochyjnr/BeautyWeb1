@@ -17,4 +17,9 @@ def product_single(request):
 
 def cart(request):
     return render(request, 'apps/cart.html', {})
+
+def checkout(request):
+    return render(request, 'apps/checkout.html', {})
+
+
     
