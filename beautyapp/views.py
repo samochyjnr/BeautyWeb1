@@ -14,4 +14,7 @@ def product(request):
 
 def product_single(request):
     return render(request, 'apps/product_single.html', {})
+
+def cart(request):
+    return render(request, 'apps/cart.html', {})
     
