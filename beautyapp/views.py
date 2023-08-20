@@ -24,5 +24,16 @@ def checkout(request):
 def blog(request):
     return render(request, 'apps/blog.html', {})
 
+def contact(request):
+    if request.method == "POST":
+        name = request.POST['name']
+        email = request.POST['email']
+        subject = request.POST['subject']
+        message = request.POST['message']
+        return render(request, 'apps/contact.html', {'name':name})
+    else:
+        return render(request, 'apps/contact.html', {})
+
+
 
     
