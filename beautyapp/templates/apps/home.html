@@ -134,10 +134,12 @@
             <h2>Featured Products</h2>
           </div>
         </div>
+		{% if record %}
+		{% for product in record %}
 				<div class="row">
 					<div class="col-md-3 d-flex">
 						<div class="product ftco-animate">
-							<div class="img d-flex align-items-center justify-content-center" style="background-image: url(static/img/img1.jpeg);">
+							<div class="img d-flex align-items-center justify-content-center" style="background-image: url ({{ product.image.url }})" >
 								<div class="desc">
 									<p class="meta-prod d-flex">
 										<a href="{% url 'cart' %}" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
@@ -146,11 +148,12 @@
 									</p>
 								</div>
 							</div>
+							
 							<div class="text text-center">
-								<span class="sale">Sale</span>
-								<span class="category">Face, Sunscreen</span>
-								<h2>Skin Aqua SPF50 110g New</h2>
-								<span class="price">NGN7,000.00
+								<span class="sale">sale</span>
+								<span class="category">{{ product.category }}</span>
+								<h2>{{ product.title }}</h2>
+								<span class="price">{{ product.price }}
 								
 							
 									
@@ -158,6 +161,8 @@
 							</div>
 						</div>
 					</div>
+					{% endfor %}
+					{% endif %}
 					<div class="col-md-3 d-flex">
 						<div class="product ftco-animate">
 							<div class="img d-flex align-items-center justify-content-center" style="background-image: url(static/img/img2.png);">
@@ -415,7 +420,7 @@
 
 
 		
-    <section class="ftco-section">
+    {% comment %} <section class="ftco-section">
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 heading-section text-center ftco-animate">
@@ -486,7 +491,7 @@
           </div>
         </div>
       </div>
-    </section>	
+    </section>	 {% endcomment %}
 
     
 

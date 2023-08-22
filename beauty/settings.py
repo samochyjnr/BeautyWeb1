@@ -154,6 +154,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 JAZZMIN_SETTINGS = {
     'site_header': 'Uddy',
     'site_brand': 'My work',
-    'site_logo': 'img/wrk.jpeg',
+    'site_logo': 'img/logo.jpeg',
     'copyright': 'Uddy shop',
 }
