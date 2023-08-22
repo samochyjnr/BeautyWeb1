@@ -20,6 +20,11 @@
     
     <link rel="stylesheet" href="{% static '/css/flaticon.css' %}">
     <link rel="stylesheet" href="{% static '/css/style.css' %}">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="{% static '/favicon_io-2/apple-touch-icon.png' %}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{% static '/favicon_io-2/favicon-32x32.png' %}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{% static '/favicon_io-2/favicon-16x16.png' %}">
+	<link rel="manifest" href="{% static '/favicon_io-2/site.webmanifest' %}">
   </head>
   <body>
 
@@ -52,7 +57,7 @@
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="{% url 'home' %}">Willow <span></span></a>
-		  <img src="/docs/4.6/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
+		  <!--<img src="{% static '/img/favicon.ico' %}" alt="">-->
 	      <div class="order-lg-last btn-group">
           <a href="#" class="btn-cart dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           	<span class="flaticon-shopping-bag"></span>
