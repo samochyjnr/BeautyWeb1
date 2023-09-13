@@ -98,7 +98,7 @@ DATABASES = {
         'PORT':'3306',
     }
 }
-'''
+
 
 DATABASES = {
     'default': {
@@ -106,7 +106,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+'''
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -169,6 +169,17 @@ JAZZMIN_SETTINGS = {
     'copyright': 'Uddy shop',
 }
 
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('NAME'),
+        'USER': os.environ.get('USER'),
+        'PASSWORD': os.environ.get('PASSWORD'),
+        'HOST': os.environ.get('HOST'),
+        'PORT': '5432'
+    }
+}
 
 import dj_database_url
 
