@@ -98,8 +98,8 @@ DATABASES = {
         'PORT':'3306',
     }
 }
-'''
-'''
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -182,11 +182,10 @@ DATABASES = {
 }
 
 import dj_database_url
-
 DATABASES = {
-    'default': dj_database_url.config(
-        default='portfoliodatabase_qjbj',
-        conn_max_age=600
+    'default' : dj_database_url.config (default=os.environ.get('DATABASE_URL'),
+    conn_max_age=600,
+    conn_health_checks=True,
     )
 }
 
