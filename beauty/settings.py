@@ -88,9 +88,19 @@ WSGI_APPLICATION = 'beauty.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+'''
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'beauty',
+        'USER': 'root',
+        'PASSWORD': 'Bimbo4wife',
+        'HOST': 'localhost',
+        'PORT':'3306',
+    }
+}
 
-
-
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -160,7 +170,7 @@ JAZZMIN_SETTINGS = {
     'copyright': 'Uddy shop',
 }
 
-
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -171,7 +181,7 @@ DATABASES = {
         'PORT': '5432'
     }
 }
-
+'''
 import dj_database_url
 DATABASES = {
     'default' : dj_database_url.config (default=os.environ.get('DATABASES_URL'),
