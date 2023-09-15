@@ -160,7 +160,7 @@ JAZZMIN_SETTINGS = {
     'copyright': 'Uddy shop',
 }
 
-'''
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -171,7 +171,7 @@ DATABASES = {
         'PORT': '5432'
     }
 }
-'''
+
 import dj_database_url
 DATABASES = {
     'default' : dj_database_url.config (default=os.environ.get('DATABASES_URL'),
