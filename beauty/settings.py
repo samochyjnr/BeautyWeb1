@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['willow-mm95.onrender.com', '127.0.0.1']
+ALLOWED_HOSTS = ['beauty-jqq8.onrender.com', '127.0.0.1']
 
 
 from dotenv import load_dotenv
