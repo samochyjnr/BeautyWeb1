@@ -53,7 +53,7 @@ class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     image = models.ImageField(upload_to=user_directory_path, default='product.jpg')
     description = models.TextField(blank=True, null=True)
-    price = models.DecimalField(max_digits=800, decimal_places=2, default='400')
+    price = models.DecimalField(max_digits=100, decimal_places=2, default='400')
     old_price = models.DecimalField(max_digits=400, decimal_places=2, default='600')
     specification = models.TextField(null=True, blank=True)
     product_status = models.CharField(choices=STATUS, max_length=10, default='In Review')
@@ -91,7 +91,7 @@ class ProductImage(models.Model):
         
 class CartOrder(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    price = models.DecimalField(max_digits=888, decimal_places=2.0 )
+    price = models.DecimalField(max_digits=100, decimal_places=2.0 )
     paid_status = models.BooleanField(default=True)
     order_date = models.DateTimeField(auto_now_add=True)
     product_status = models.CharField(choices=STATUS_CHOICE, max_length=30, default='Processing')
