@@ -106,7 +106,7 @@ class CartOrderItem(models.Model):
     item = models.CharField (max_length=200)
     images = models.CharField (max_length=200)
     Qty = models.CharField(max_length=200)
-    price = models.DecimalField(max_digits=20, decimal_places=2, default='200')
+    price = models.DecimalField(max_digits=20, decimal_places=2)
     total = models.DecimalField(max_digits=700, decimal_places=2, default='200')
     
     class Meta:
